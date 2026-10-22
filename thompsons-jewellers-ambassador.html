@@ -6,6 +6,8 @@
 <title>Thompson's Jewellers | Brand Ambassador Program</title>
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js" defer></script>
+<script src="assets/application-config.js" defer></script>
+<script src="assets/application.js" defer></script>
 </head>
 <body id="top" data-page="ambassador">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -16,7 +18,29 @@
 <section class="hero"><div class="hero-in"><div><div class="eyebrow">Brand Ambassador Program</div><h1>Share your style. Represent something beautiful.</h1><p>Thompson's Jewellers is growing its community of creative brand ambassadors who can introduce our jewelry collections to new audiences through authentic social-media content.</p><a class="btn" href="#apply">Explore the opportunity</a></div><div class="hero-card"><img src="images/orlando-store.jpeg" alt="Interior of Thompson's Jewellers Orlando store, with jewelry display cases" width="1200" height="900" fetchpriority="high"></div></div></section>
 <section class="section" id="program"><div class="section-in"><div class="eyebrow">The opportunity</div><h2>For people who love jewelry, fashion, and creating.</h2><p class="lead">Our ambassador program is designed for individuals who enjoy creating social content and connecting with an audience. Selected ambassadors receive campaign-specific information and promotional guidelines before participating.</p><div class="grid"><article class="card"><div class="num">01</div><h3>Discover</h3><p>Learn about Thompson's collections, campaign themes, and the pieces being promoted.</p></article><article class="card"><div class="num">02</div><h3>Create</h3><p>Produce social content that reflects your own style while following the applicable campaign requirements.</p></article><article class="card"><div class="num">03</div><h3>Represent</h3><p>Introduce our jewelry to your audience in a clear, authentic, and brand-safe way.</p></article></div></div></section>
 <section class="section dark" id="how"><div class="section-in"><div class="eyebrow">How it works</div><h2>Simple, clear, and campaign-led.</h2><p class="lead">Every campaign comes with the information you need before you participate.</p><div class="details"><div class="detail"><strong>1. Apply</strong><span>Tell us about yourself and your social presence.</span></div><div class="detail"><strong>2. Review</strong><span>Our team reviews applications against the program requirements.</span></div><div class="detail"><strong>3. Receive details</strong><span>Selected ambassadors receive campaign instructions and applicable terms.</span></div><div class="detail"><strong>4. Create & share</strong><span>Publish approved promotional content according to the campaign guidelines.</span></div></div></div></section>
-<section class="section" id="apply"><div class="section-in"><div class="eyebrow">Application</div><h2>Interested in becoming an ambassador?</h2><p class="lead">Complete the form below. Submitting an application does not guarantee acceptance, employment, compensation, or participation in a particular campaign.</p><div class="apply"><form onsubmit="event.preventDefault(); document.getElementById('sent').hidden=false; this.reset();"><label>Full name<input required name="name" autocomplete="name"></label><label>Email address<input required type="email" name="email" autocomplete="email"></label><label>Instagram username<input name="instagram" placeholder="@username"></label><label>Snapchat username<input name="snapchat"></label><label>TikTok username <span style="font-weight:400">(optional)</span><input name="tiktok"></label><label>Content category<select name="category"><option>Jewelry</option><option>Fashion</option><option>Lifestyle</option><option>Beauty</option><option>Other</option></select></label><label class="full">Why would you like to represent Thompson's Jewellers?<textarea required name="why"></textarea></label><label class="check"><input required type="checkbox"> I confirm that I have reviewed the opportunity description and understand that an application does not guarantee acceptance or compensation.</label><button class="btn submit" type="submit">Submit application</button></form><div id="sent" class="note" hidden></div></div></div></section>
+<section class="section" id="apply">
+  <div class="section-in">
+    <div class="eyebrow">Application</div>
+    <h2>Interested in becoming an ambassador?</h2>
+    <p class="lead">Complete the form below. Submitting an application does not guarantee acceptance, employment, compensation, or participation in a particular campaign.</p>
+    <div class="apply">
+      <form id="ambassadorApplication" method="post" aria-describedby="applicationStatus">
+        <label>Full name<input required name="name" autocomplete="name" maxlength="120"></label>
+        <label>Email address<input required type="email" name="email" autocomplete="email" maxlength="254"></label>
+        <label>Instagram username<input name="instagram" placeholder="@username" maxlength="100"></label>
+        <label>Snapchat username<input name="snapchat" maxlength="100"></label>
+        <label>TikTok username <span style="font-weight:400">(optional)</span><input name="tiktok" maxlength="100"></label>
+        <label>Content category<select name="category"><option>Jewelry</option><option>Fashion</option><option>Lifestyle</option><option>Beauty</option><option>Other</option></select></label>
+        <label class="full">Why would you like to represent Thompson's Jewellers?<textarea required name="why" maxlength="3000"></textarea></label>
+        <div class="application-trap" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off" maxlength="200"></label></div>
+        <label class="check"><input required type="checkbox" name="consent" value="yes"> I confirm that I have reviewed the opportunity description and understand that an application does not guarantee acceptance or compensation.</label>
+        <button class="btn submit" type="submit" disabled>Submit application</button>
+      </form>
+      <p id="applicationStatus" class="note application-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+      <noscript><p class="note">Please enable JavaScript to submit your application.</p></noscript>
+    </div>
+  </div>
+</section>
 <section class="section" id="faq"><div class="section-in"><div class="eyebrow">FAQ</div><h2>Questions, answered.</h2><div class="faq"><details><summary>Is this an employment position?</summary><p>Yes. If hired, you will work as a full-time Brand Ambassador, not as an independent contractor.</p></details><details><summary>How is compensation handled?</summary><p>Compensation is $600 per campaign, with a maximum of four campaigns per week.</p></details><details><summary>What happens after I apply?</summary><p>Applications are reviewed according to the program requirements. Selected participants receive the applicable campaign information before taking part.</p></details><details><summary>Do I have to pay to apply?</summary><p>No. No payment or fee is required.</p></details></div></div></section>
 </main>
 <footer class="footer"><div class="footer-in"><div>© 2026 Thompson's Jewellers. All rights reserved.</div><div><a href="index.html">Main website</a></div></div></footer>

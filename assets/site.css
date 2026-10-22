@@ -82,9 +82,16 @@ img { max-width: 100%; }
 .full { grid-column: 1 / -1; }
 .apply textarea { min-height: 120px; resize: vertical; }
 .apply label.check { display: flex; align-items: flex-start; gap: 9px; grid-column: 1 / -1; color: var(--muted); font: 12px/1.6 var(--sans); letter-spacing: 0; }
-.check input { width: auto; margin-top: 3px; }
+.check input { width: 16px; height: 16px; flex: 0 0 16px; margin-top: 3px; padding: 0; accent-color: var(--dark); }
 .submit { margin-top: 5px; }
 .note { margin-top: 12px; color: var(--muted); font: 12px/1.6 var(--sans); }
+.apply { position: relative; }
+.application-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.apply input, .apply textarea, .apply select { min-width: 0; }
+.apply .btn:disabled { opacity: .6; cursor: not-allowed; }
+.application-status { padding: 12px 14px; border: 1px solid var(--line); background: var(--cream); }
+.application-status[data-state="error"] { color: #8b2727; border-color: #deb7b7; background: #fff5f3; }
+.application-status[data-state="success"] { color: #285d3e; border-color: #bdd1c3; background: #f1f8f3; }
 .faq { margin-top: 34px; border-top: 1px solid var(--line); }
 .faq details { padding: 20px 0; border-bottom: 1px solid var(--line); }
 .faq summary { cursor: pointer; font-size: 18px; }
